@@ -15,7 +15,7 @@ export default function Title() {
                     }}
                 />
             </span>
-            <span className="font-semibold text-xl text-center -tracking-[0.015625rem]">WatchFinder</span>
+            <span className="font-semibold text-xl text-center -tracking-[0.015625rem] text-[#01b4e4]">WatchFinder</span>
         </a>
     );
 }

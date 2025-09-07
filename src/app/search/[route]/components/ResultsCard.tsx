@@ -9,10 +9,9 @@ type ResultsCardProps = {
 
 export default function ResultsCard({ route, item }: ResultsCardProps) {
     const id = item.id;
-    const type = item.media_type;
-    const src = item.poster_path === '' ? '/images/png/fallback.png' : `https://image.tmdb.org/t/p/original${item.poster_path}`;
-    const title = type === 'movie' ? item.title : type === 'tv' ? item.original_name : (item as Movie).title || (item as TVShow).original_name;
-    const date = type === 'movie' ? item.release_date : type === 'tv' ? item.first_air_date : (item as Movie).release_date || (item as TVShow).first_air_date;
+    const src = !item.poster_path ? '/fallback.png' : `https://image.tmdb.org/t/p/original${item.poster_path}`;
+    const title = route === 'movie' ? (item as Movie).title : (item as TVShow).original_name;
+    const date = route === 'movie' ? (item as Movie).release_date : (item as TVShow).first_air_date;
     const score = item.vote_average;
 
     return (
@@ -25,10 +24,10 @@ export default function ResultsCard({ route, item }: ResultsCardProps) {
             className="self-start"
         >
             <div className="flex flex-col items-start justify-start gap-y-2 duration-300 hover:opacity-80 overflow-hidden relative z-10">
-                <CardImage id={id} src={src} title={title} score={score} className="w-full" />
+                <CardImage id={id} type={route} src={src} title={title} score={score} className="w-full" />
 
                 <div className="flex flex-col w-full">
-                    <CardTitle id={id} type={type} title={title} titleClassName="font-medium text-sm sm:text-[0.9375rem] line-clamp-2" />
+                    <CardTitle id={id} type={route} title={title} titleClassName="font-medium text-sm sm:text-[0.9375rem] line-clamp-2" />
                     <p className="text-xs text-muted-foreground">
                         {formatDate(date, {
                             year: 'numeric',
