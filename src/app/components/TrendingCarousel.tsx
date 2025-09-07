@@ -25,7 +25,7 @@ export default function TrendingTodayCarousel({ data }: { data: (Movie | TVShow)
                     data.map((item, index) => {
                         const id = item.id;
                         const type = item.media_type;
-                        const src = item.poster_path === '' ? '/images/png/fallback.png' : `https://image.tmdb.org/t/p/original${item.poster_path}`;
+                        const src = !item.poster_path ? '/fallback.png' : `https://image.tmdb.org/t/p/original${item.poster_path}`;
                         const title = type === 'movie' ? item.title : type === 'tv' ? item.original_name : (item as Movie).title || (item as TVShow).original_name;
                         const date = type === 'movie' ? item.release_date : type === 'tv' ? item.first_air_date : (item as Movie).release_date || (item as TVShow).first_air_date;
                         const score = item.vote_average;

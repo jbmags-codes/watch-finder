@@ -13,7 +13,7 @@ export default async function PopularMovies() {
 
     return (
         <div className="flex flex-col w-full gap-y-4">
-            <h2 className="font-semibold text-xl tracking-tight">Popular Movies</h2>
+            <h2 className="font-semibold text-xl tracking-tight text-[#0d253f]">Popular Movies</h2>
 
             <div className="flex flex-col md:flex-row md:flex-wrap justify-start xs:justify-between sm:justify-start md:justify-between w-full gap-y-3.5 xs:gap-y-4 md:gap-4">
                 {popularMovies.results.map((item, index) => {

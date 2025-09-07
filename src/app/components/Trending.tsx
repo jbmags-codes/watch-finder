@@ -6,7 +6,7 @@ export default function Trending() {
     return (
         <Tabs defaultValue="today" className="w-full gap-y-4">
             <div className="flex items-center gap-x-2.5">
-                <h2 className="font-semibold text-xl">Trending</h2>
+                <h2 className="font-semibold text-xl text-[#0d253f]">Trending</h2>
 
                 <TabsList>
                     <TabsTrigger value="today">Today</TabsTrigger>
