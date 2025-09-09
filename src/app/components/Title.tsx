@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Title() {
     return (
-        <a href="/" className="flex flex-nowrap items-center justify-center w-fit gap-x-4">
+        <Link href="/" className="flex flex-nowrap items-center justify-center w-fit gap-x-4">
             <span className="relative w-12 h-8 inline-block">
                 <Image
                     src={'/tmdb.svg'}
@@ -16,6 +17,6 @@ export default function Title() {
                 />
             </span>
             <span className="font-semibold text-xl text-center -tracking-[0.015625rem] text-[#01b4e4]">WatchFinder</span>
-        </a>
+        </Link>
     );
 }
