@@ -14,11 +14,7 @@ type CardImageProps = {
 
 export default function CardImage({ id, type, src, title, score, className }: CardImageProps) {
     return (
-        <Link
-            href={`/${type}/${id}`}
-            className={cn('relative flex items-center justify-center rounded-xl shadow-sm hover:opacity-80 duration-300 aspect-[7/10]', className)}
-            scroll={false}
-        >
+        <Link href={`/${type}/${id}`} className={cn('relative flex items-center justify-center rounded-xl shadow-sm hover:opacity-80 duration-300 aspect-[7/10]', className)}>
             <Image
                 src={src}
                 alt={`${title} Cover`}

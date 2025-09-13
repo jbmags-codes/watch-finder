@@ -1,5 +1,5 @@
-import { FormEvent, useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { FormEvent, useEffect, useState } from 'react';
 import useSessionStorage from '@/hooks/useSessionStorage';
 
 export default function useSearch() {

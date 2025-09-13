@@ -1,5 +1,5 @@
-import { cn } from '@/lib/utils';
 import Markdown from 'react-markdown';
+import { cn } from '@/lib/utils';
 
 type CardDescriptionProps = {
     description: string;
