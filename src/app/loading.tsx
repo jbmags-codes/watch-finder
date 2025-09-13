@@ -3,7 +3,7 @@ import { WebsiteLogo } from '../../public/jbcodes-logo';
 
 export default function Loading() {
     return (
-        <div className="relative flex items-center justify-center w-full h-[100svh] sm:h-[100dvh]">
+        <div className="relative flex items-center justify-center w-full h-[50svh] sm:h-[50dvh]">
             <Loader2 size={160} strokeWidth="0.75" className="animate-loading-spin" />
 
             <div className="absolute self-center text-black dark:[&>svg]:text-white">

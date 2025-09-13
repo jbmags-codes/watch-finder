@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import Results from '@/app/search/[route]/components/Results';
-import Loading from '@/components/Loading';
+import Loading from '@/app/loading';
 
 type SearchResultsPageProps = {
     params: Promise<{

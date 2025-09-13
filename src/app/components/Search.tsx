@@ -1,10 +1,10 @@
 'use client';
 
+import { Suspense } from 'react';
+import { Skeleton } from '@/components/ui/skeleton';
 import SearchFormInput from '@/app/components/SearchFormInput';
 import MovieOrTVSelect from '@/app/components/MovieOrTVSelect';
 import useSearch from '@/app/hooks/useSearch';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Suspense } from 'react';
 import Loading from '@/app/loading';
 
 export default function SearchWrapper() {

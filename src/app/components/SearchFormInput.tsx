@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEventHandler } from 'react';
-import { Input } from '@/components/ui/input';
 import { LoaderCircleIcon, SearchIcon } from 'lucide-react';
+import { Input } from '@/components/ui/input';
 
 type SearchFormInputProps = {
     onSubmit?: FormEventHandler<HTMLFormElement>;

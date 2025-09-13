@@ -11,7 +11,7 @@ type CardTitleProps = {
 
 export default function CardTitle({ id, type, title, linkClassName, titleClassName }: CardTitleProps) {
     return (
-        <Link href={`/${type}/${id}`} className={cn('hover:text-cyan-500 duration-300 w-fit', linkClassName)} scroll={false}>
+        <Link href={`/${type}/${id}`} className={cn('hover:text-cyan-500 duration-300 w-fit', linkClassName)}>
             <h1 className={cn(titleClassName)}>{title}</h1>
         </Link>
     );

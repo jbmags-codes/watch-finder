@@ -1,0 +1,9 @@
+services:
+    next:
+        build: .
+        container_name: watch-finder-next
+        restart: always
+        ports:
+            - '8002:3000'
+        environment:
+            NODE_ENV: production
