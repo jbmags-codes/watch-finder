@@ -68,7 +68,7 @@ export default function RootLayout({
                             {/* Spacer */}
                             <div className="py-3 xs:py-4 sm:py-5" />
 
-                            <GitHubRepo link="https://github.com/jbmags-codes/watch-finder-nextjs" />
+                            <GitHubRepo link="https://github.com/jbmags-codes/watchfinder-next" />
                         </div>
                     </main>
 
