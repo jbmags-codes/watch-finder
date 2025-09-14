@@ -1,9 +1,10 @@
 services:
     next:
         build: .
-        container_name: watch-finder-next
         restart: always
         ports:
             - '8002:3000'
         environment:
             NODE_ENV: production
+        cpus: 0.5 # Max CPU the container can use (half of one core)
+        mem_limit: 256m # Max memory the container can use
